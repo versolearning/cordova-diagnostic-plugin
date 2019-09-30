@@ -62,28 +62,6 @@
         </config-file>
         <!--END_MODULE LOCATION-->
 
-        <!--BEGIN_MODULE BLUETOOTH-->
-        <config-file target="config.xml" parent="/*">
-            <feature name="Diagnostic_Bluetooth">
-                <param name="ios-package" value="Diagnostic_Bluetooth" />
-                <param name="onload" value="true" />
-            </feature>
-        </config-file>
-
-        <js-module src="www/ios/diagnostic.bluetooth.js" name="Diagnostic_Bluetooth">
-            <merges target="cordova.plugins.diagnostic.bluetooth" />
-        </js-module>
-
-        <header-file src="src/ios/Diagnostic_Bluetooth.h" />
-        <source-file src="src/ios/Diagnostic_Bluetooth.m" />
-
-        <framework src="CoreBluetooth.framework" />
-
-        <config-file target="*-Info.plist" parent="NSBluetoothPeripheralUsageDescription">
-            <string>This app requires bluetooth access to function properly.</string>
-        </config-file>
-        <!--END_MODULE BLUETOOTH-->
-
         <!--BEGIN_MODULE WIFI-->
         <config-file target="config.xml" parent="/*">
             <feature name="Diagnostic_Wifi">
